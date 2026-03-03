@@ -1,7 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 import { useEffect } from "react";
 
-import { About, Contact, Experience, Hero, Navbar, StarsCanvas } from "./components";
+import { About, Experience, Hero, Navbar, StarsCanvas, AvatarSection } from "./components";
 
 const App = () => {
     // Scroll to top on page load/reload and clear hash
@@ -25,7 +25,7 @@ const App = () => {
                 <About />
                 <Experience />
                 <div className="relative z-0">
-                    <Contact />
+                    <AvatarSection />
                     <StarsCanvas />
                 </div>
             </div>

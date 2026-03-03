@@ -111,6 +111,21 @@ const technologies = [
 
 const experiences = [
     {
+        title: "InkTrack",
+        company_name: "Flutter, Dart",
+        icon: github,
+        iconBg: "radial-gradient(circle at center, #2d2470ff, #4a37de)",
+        iconLink: "https://github.com/JeffersonDevR/INKTRACK_APP",
+        date: "November 2025 - Today",
+        points: [
+            "POS app for a local store made in Flutter and Dart",
+            "Has the basic features of a POS app but the implementations or barcode scanner",
+            "Later on the idea is implement OCR with the cam for writing of clients that owns or 'Fia'",
+            "The application is currently in development and will be implemented in React Native to be used in mobile devices mostly for the BarScanner.",
+        ]
+
+    },
+    {
         title: "InkTrack in Java",
         company_name: "Java, Vaadin , Spring Boot, H2 DB, html, css, js",
         icon: github,

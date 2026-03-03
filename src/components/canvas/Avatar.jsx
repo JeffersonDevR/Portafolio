@@ -5,12 +5,12 @@ import * as THREE from 'three'; // Import the THREE library
 import CanvasLoader from "../Loader";
 
 
-const Earth = () => {
-    const earth = useGLTF("./avatar/avatar.glb");
+const Avatar = () => {
+    const avatar = useGLTF("./avatar/avatar.glb");
 
 
     // This will iterate through all children (objects) in the loaded scene.
-    earth.scene.traverse((object) => {
+    avatar.scene.traverse((object) => {
         // We only want to apply the material change to actual Meshes
         if (object.isMesh) {
             // Apply a new MeshStandardMaterial for metallic look
@@ -27,10 +27,10 @@ const Earth = () => {
     });
     // 🌟 END OF TRAVERSE 🌟
 
-    return <primitive object={earth.scene} scale={2.5} position-y={0} rotation-y={0} />;
+    return <primitive object={avatar.scene} scale={2.5} position-y={0} rotation-y={0} />;
 };
 
-const EarthCanvas = () => {
+const AvatarCanvas = () => {
     return (
         <Canvas
             shadows
@@ -50,11 +50,11 @@ const EarthCanvas = () => {
                 {/* Add an ambient light and directional light for better visibility of the metallic surface */}
                 {/* <ambientLight intensity={0.001} /> */}
                 <directionalLight position={[2, 2, 2]} intensity={4} color="#d7dbdf" />
-                <Earth />
+                <Avatar />
                 <Preload all />
             </Suspense>
         </Canvas>
     );
 };
 
-export default EarthCanvas;
+export default AvatarCanvas;

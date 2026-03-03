@@ -1,9 +1,10 @@
-import { EarthCanvas, BallCanvas, ComputersCanvas, StarsCanvas } from "./canvas";
+import { AvatarCanvas, BallCanvas, ComputersCanvas, StarsCanvas } from "./canvas";
 import Hero from "./Hero";
 import Navbar from "./Navbar";
 import About from "./About";
 import Experience from "./Experience";
 import Contact from "./Contact";
+import AvatarSection from "./AvatarSection";
 import CanvasLoader from "./Loader";
 
 export {
@@ -11,9 +12,10 @@ export {
     Navbar,
     About,
     Experience,
-    Contact,
+    // Contact,
+    AvatarSection,
     CanvasLoader,
-    EarthCanvas,
+    AvatarCanvas,
     BallCanvas,
     ComputersCanvas,
     StarsCanvas,

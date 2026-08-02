@@ -15,7 +15,7 @@ const Hero = () => {
 
                 <div style={{ zIndex: 1 }}>
                     <h1 className={`${styles.heroHeadText} text-white text-3d `}>
-                        Soy{" "}
+                        Hi, I&apos;m{" "}
                         <motion.span
                             initial={{ opacity: 0, y: -30 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -26,7 +26,7 @@ const Hero = () => {
                         </motion.span>
                     </h1>
                     <p className={`${styles.heroSubText} mt-2 text-white-100 text-3d`}>
-                        Estudiante de Desarrollo de Software | Entusiasta 3D | Motion Graphics
+                        Software Development Student | 3D Enthusiast | Motion Graphics
                     </p>
                     <div className="flex sm:flex-row mt-6">
                         <a

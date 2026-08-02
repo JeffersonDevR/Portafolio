@@ -36,6 +36,11 @@ import email from "./email.svg";
 import youtube from "./youtube.svg";
 import instagram from "./instagram.svg";
 
+import intrackCap from "./projects/intrack_cap.jpg";
+import intrackCap2 from "./projects/intrack_cap_2.jpg";
+import intrackCap3 from "./projects/intrack_cap_3.jpg";
+import intrackLogo from "./projects/Logo.png";
+
 export {
     logo,
     backend,
@@ -72,4 +77,8 @@ export {
     email,
     youtube,
     instagram,
+    intrackCap,
+    intrackCap2,
+    intrackCap3,
+    intrackLogo,
 };

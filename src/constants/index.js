@@ -17,6 +17,10 @@ import {
     vagrant,
     vuforia,
     githubblack,
+    intrackCap,
+    intrackCap2,
+    intrackCap3,
+    intrackLogo,
 } from "../assets";
 
 
@@ -190,4 +194,79 @@ const experiences = [
 
 
 
-export { services, technologies, experiences };
+const projects = [
+    {
+        id: "inktrack-app",
+        title: "InkTrack App",
+        description:
+            "A point-of-sale application for a local store: inventory, sales tracking, and barcode scanning, built with Flutter.",
+        tags: ["Flutter", "Dart"],
+        github: "https://github.com/JeffersonDevR/INKTRACK_APP",
+        image: null,
+        screenshots: [intrackCap, intrackCap2, intrackCap3],
+        featured: true,
+    },
+    {
+        id: "inktrack-web",
+        title: "InkTrack Web",
+        description:
+            "Web migration of the InkTrack POS with improved UI/UX, built with Java, Vaadin and Spring Boot.",
+        tags: ["Java", "Vaadin", "Spring Boot"],
+        github: "https://github.com/JeffersonDevR/InkTrack__Java",
+        image: intrackLogo,
+        featured: false,
+    },
+    {
+        id: "inktrack-pos",
+        title: "InkTrack POS",
+        description:
+            "Original InkTrack POS system for a local store: CRUD operations and inventory management, built with Python and Flet.",
+        tags: ["Python", "Flet"],
+        github: "https://github.com/JeffersonDevR/InkTrack",
+        image: intrackLogo,
+        featured: false,
+    },
+    {
+        id: "gestor-tickets",
+        title: "Gestor de Tickets",
+        description:
+            "A ticket management tool built with Python to organize and track support requests efficiently.",
+        tags: ["Python"],
+        github: "https://github.com/JeffersonDevR/Gestor_Tickets",
+        image: null,
+        featured: false,
+    },
+    {
+        id: "air-quality-frontend",
+        title: "Air Quality Frontend",
+        description:
+            "Frontend that visualizes air quality data fetched from a weather API, built with Python and Flet.",
+        tags: ["Python", "Flet"],
+        github: "https://github.com/JeffersonDevR/AirQualityFront",
+        image: null,
+        featured: false,
+    },
+    {
+        id: "uso-ia-formacion",
+        title: "AI Usage in Education",
+        description:
+            "Interactive dashboard presenting the results of a survey about AI usage in classrooms, showing benefits and drawbacks for students and teachers.",
+        tags: ["Python", "Streamlit"],
+        github: "https://github.com/JeffersonDevR/UsoDeIAEnFormacion",
+        image: null,
+        featured: false,
+    },
+    {
+        id: "alura-store-data",
+        title: "Alura Store Data Challenge",
+        description:
+            "Data analysis challenge: exploring store data to support data-driven decisions.",
+        tags: ["Jupyter", "Python"],
+        github: "https://github.com/JeffersonDevR/Alura_Latam_Store_Data_Challengue",
+        image: null,
+        featured: false,
+    },
+];
+
+
+export { services, technologies, experiences, projects };

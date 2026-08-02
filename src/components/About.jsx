@@ -45,10 +45,10 @@ const About = () => {
                 variants={fadeIn("", "", 0.1, 1)}
                 className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
             >
-                I am a passionate and highly motivated individual,
-                constantly eager to learn and adapt to new technologies.
+                I am a passionate and highly motivated software developer,
+                always eager to learn and adapt to new technologies.
                 My enthusiasm for <span className="text-tertiary">3D artistry</span>, <span className="text-tertiary">software development</span>, and <span className="text-tertiary">motion graphics</span> drives me to create engaging and innovative experiences.
-                I thrive on challenges and am dedicated to expanding my skills to build impactful solutions.
+                I thrive on challenges and am dedicated to expanding my skills to build impactful, real-world solutions.
             </motion.p>
 
             <div className="mt-20 flex flex-wrap gap-10">

@@ -56,7 +56,7 @@ const FeaturedProjectCard = ({ project }) => (
                         <PhoneMockup
                             screenshot={project.screenshots[0]}
                             alt={`${project.title} screenshot 1`}
-                            className="h-48 sm:h-64 lg:h-[22rem]"
+                            className="hidden sm:block h-48 sm:h-64 lg:h-[22rem]"
                         />
                         <PhoneMockup
                             screenshot={project.screenshots[1]}
@@ -66,7 +66,7 @@ const FeaturedProjectCard = ({ project }) => (
                         <PhoneMockup
                             screenshot={project.screenshots[2]}
                             alt={`${project.title} screenshot 3`}
-                            className="h-48 sm:h-64 lg:h-[22rem]"
+                            className="hidden sm:block h-48 sm:h-64 lg:h-[22rem]"
                         />
                     </div>
 

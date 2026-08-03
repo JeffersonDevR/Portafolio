@@ -7,6 +7,7 @@ import CanvasLoader from "../Loader";
 
 const Avatar = () => {
     const avatar = useGLTF("./avatar/avatar.glb");
+    const { size } = useThree();
     const materialsRef = useRef([]);
 
     materialsRef.current.forEach((material) => material.dispose());
@@ -44,7 +45,35 @@ const Avatar = () => {
         });
     });
 
-    return <primitive object={avatar.scene} scale={2.5} position-y={0} rotation-y={0} />;
+    const avatarScale = size.width < 640 ? 1.9 : 2.5;
+
+    return <primitive object={avatar.scene} scale={avatarScale} position-y={0} rotation-y={0} />;
+};
+
+// Pull the camera closer on narrow screens so the model fills the viewport.
+const ResponsiveCamera = () => {
+    const { camera, size, controls } = useThree();
+
+    useEffect(() => {
+        let position;
+        if (size.width < 640) {
+            position = [-2.4, 2.2, 3.8];
+        } else if (size.width < 1024) {
+            position = [-3.2, 2.6, 4.8];
+        } else {
+            position = [-4, 3, 6];
+        }
+        camera.position.set(...position);
+        camera.lookAt(0, 0, 0);
+        camera.updateProjectionMatrix();
+        // Let OrbitControls re-sync its internal state so autoRotate keeps working.
+        if (controls) {
+            controls.target.set(0, 0, 0);
+            controls.update();
+        }
+    }, [camera, size.width, controls]);
+
+    return null;
 };
 
 // Small, tertiary-colored particles orbiting around the avatar in a fuzzy shell.
@@ -145,7 +174,7 @@ const AvatarCanvas = () => {
         <Canvas
             shadows
             frameloop="always"
-            dpr={[1, 2]}
+            dpr={[1, 1.5]}
             gl={{ preserveDrawingBuffer: true }}
             camera={{
                 fov: 45,
@@ -156,7 +185,8 @@ const AvatarCanvas = () => {
             className="canvas"
         >
             <Suspense fallback={<CanvasLoader />}>
-                <OrbitControls autoRotate enableZoom={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} />
+                <ResponsiveCamera />
+                <OrbitControls makeDefault autoRotate enableZoom={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} />
                 {/* Add an ambient light and directional light for better visibility of the metallic surface */}
                 {/* <ambientLight intensity={0.001} /> */}
                 <directionalLight position={[2, 2, 2]} intensity={4} color="#d7dbdf" />
